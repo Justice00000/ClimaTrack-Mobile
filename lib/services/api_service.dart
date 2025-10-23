@@ -4,7 +4,7 @@ import 'package:geolocator/geolocator.dart';
 
 class ApiService {
   // Change this to your actual backend URL
-  static const String baseUrl = 'http://localhost:8000';
+  static const String baseUrl = 'https://climatrack-2ve7.onrender.com';
   
   static String? _accessToken;
   
@@ -21,9 +21,7 @@ class ApiService {
     return headers;
   }
 
-  // ============================================================================
   // AUTHENTICATION
-  // ============================================================================
 
   /// Register new user
   static Future<Map<String, dynamic>> register({
@@ -137,9 +135,7 @@ class ApiService {
     }
   }
 
-  // ============================================================================
   // RISK PREDICTION
-  // ============================================================================
 
   /// Generate risk prediction
   static Future<Map<String, dynamic>> generateRiskPrediction({
@@ -252,9 +248,7 @@ class ApiService {
     }
   }
 
-  // ============================================================================
   // ZONES
-  // ============================================================================
 
   /// Get all zones
   static Future<Map<String, dynamic>> getAllZones() async {
@@ -310,9 +304,7 @@ class ApiService {
     }
   }
 
-  // ============================================================================
   // COMMUNITY REPORTS
-  // ============================================================================
 
   /// Submit community report
   static Future<Map<String, dynamic>> submitReport({
@@ -385,9 +377,7 @@ class ApiService {
     }
   }
 
-  // ============================================================================
   // HEALTH LOGGING
-  // ============================================================================
 
   /// Log health symptom
   static Future<Map<String, dynamic>> logHealthSymptom({
@@ -462,9 +452,7 @@ class ApiService {
     }
   }
 
-  // ============================================================================
   // ALERTS
-  // ============================================================================
 
   /// Get active alerts
   static Future<Map<String, dynamic>> getActiveAlerts({
@@ -501,9 +489,7 @@ class ApiService {
     }
   }
 
-  // ============================================================================
   // ANALYTICS
-  // ============================================================================
 
   /// Get dashboard analytics
   static Future<Map<String, dynamic>> getDashboardAnalytics() async {
@@ -532,9 +518,7 @@ class ApiService {
     }
   }
 
-  // ============================================================================
   // HEALTH CHECK
-  // ============================================================================
 
   /// Check API health
   static Future<Map<String, dynamic>> healthCheck() async {
@@ -562,9 +546,7 @@ class ApiService {
     }
   }
 
-  // ============================================================================
   // HELPER METHODS
-  // ============================================================================
 
   /// Convert issue type to backend report type
   static String convertIssueTypeToReportType(String issueType) {
